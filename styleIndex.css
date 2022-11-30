@@ -1,0 +1,13 @@
+.navbar-nav.ms-auto li a {
+    color: #003399;
+    font-weight:500;
+}
+
+.navbar-nav.ms-auto a:hover{
+    font-weight: 700;
+}
+
+#EquiposTabla {
+    padding: 0;
+    margin: 0;
+}
