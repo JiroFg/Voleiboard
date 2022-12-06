@@ -1,5 +1,7 @@
 consultar()
 
+//jeje
+
 function tabla(response) {
     const myObj = JSON.parse(JSON.stringify(response));
     console.log(myObj)
