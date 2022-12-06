@@ -27,26 +27,6 @@ function agregarPartido(response) {
     }
 }
 
-/* <div class="col rounded m-3" style="background-color: lightblue;">
-          <div class="p-4 rounded" style="background-color: white;">
-            <h6>
-               USA - Cuba 
-            </h6>
-            <h6 class="text-success">Finalizado</h6>
-            <!-- tabla del bloque -->
-            <table class="table text-center table-bordered">
-              <thead class="thead">
-                <tr>
-                  <th>2</th>
-                  <th>1</th>
-                </tr>
-              </thead>
-            </table>
-            <!-- fin tabla -->
-            <button type="Button" class="btn btn-primary">Más info</button>
-          </div>
-        </div> */
-
 function consultar(){
     axios.get("https://backvolei-production.up.railway.app/partidos")
         .then(function (response) {

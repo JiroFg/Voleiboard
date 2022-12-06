@@ -38,7 +38,7 @@
   </nav>
   <!-- Contenido -->
   <div class="container">
-    <div class="text-center p-4"><h4>Puntuación Global World Cup</h4></div>
+    <div class="text-center p-4"><h4>Puntuación World Cup</h4></div>
     <div class="text-center px-4"><canvas id="myChart"></canvas></div>
     <br>
   </div>
@@ -49,37 +49,6 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  <script>
-    const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Japón', 'Rusia', 'Italia', 'Francia', 'Brasil', 'Corea Sur','México','USA','Cuba','Argentina'],
-        datasets: [{
-          label:'Puntos',
-          data: [380, 360, 340, 320, 300, 280, 260, 240, 220, 200],
-          backgroundColor:[
-            'rgb(51, 204, 51)',
-            'rgb(255, 0, 255)',
-            'rgb(51, 204, 204)',
-            'rgb(255, 255, 0)',
-            'rgb(255, 80, 80)',
-            'rgb(51, 102, 255)',
-            'rgb(255, 153, 51)',
-            'rgb(0, 153, 255)',
-            'rgb(204, 255, 204)',
-            'rgb(255, 204, 255)'
-          ]
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: false
-          }
-        }
-      }
-    });
-  </script>
+  <script src="js/scriptEstadis.js"></script>
 </body>
 </html>
