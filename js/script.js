@@ -13,10 +13,6 @@ function tabla(response) {
 }
 
 function consultar(){
-    let id_ = document.getElementById("id1").value
-    let nombre_ = document.getElementById("id2").value
-    let password_ = document.getElementById("id3").value
-    console.log(id_ + " " + nombre_ + " " + password_)
     axios.get("https://backvolei-production.up.railway.app/")
         .then(function (response) {
             console.log(response);
