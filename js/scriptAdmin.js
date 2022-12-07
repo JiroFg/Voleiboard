@@ -50,10 +50,17 @@ function allTablaPartidos(response) {
         let auxCell7 = auxRow.insertCell(6);
         auxCell7.appendChild(boton);
 
+<<<<<<< HEAD
         let obtenerBoton = document.getElementById(myObj[x].id);
         obtenerBoton.addEventListener("click", function () {
             $(".liveToast")
         })
+=======
+        // let obtenerBoton = document.getElementById(myObj[x].id);
+        // obtenerBoton.addEventListener("click", function () {
+        //     $(".liveToast")
+        // }
+>>>>>>> 386f12123f8abf85246e170a8137cc1702579080
     }
 }
 
