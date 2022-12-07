@@ -1,5 +1,6 @@
-consultarEquipo();
-consultarPartido();
+delPartido();
+//consultarEquipo();
+//consultarPartido();
 
 function consultarEquipo(){
     axios.get("https://backvolei-production.up.railway.app/allEquipos")
@@ -52,6 +53,7 @@ function allTablaPartidos(response) {
         let obtenerBoton = document.getElementById(myObj[x].id);
         obtenerBoton.addEventListener("click", function () {
             $(".liveToast")
+        })
     }
 }
 
@@ -135,6 +137,52 @@ function agregarPartido(){
     let score2 = 1
     let status = "En emisión"
     axios.post("https://backvolei-production.up.railway.app/addPartido", {
+        id:id,
+        equipo1: equipo1,
+        score1: score1,
+        equipo2: equipo2,
+        score2: score2,
+        status: status
+    })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+function delPartido(){
+    let id = 9
+    let equipo1 = "USA"
+    let score1 = 2
+    let equipo2 = "Cuba"
+    let score2 = 1
+    let status = "En emisión"
+    axios.post("https://backvolei-production.up.railway.app/delPartido", {
+        id:id,
+        equipo1: equipo1,
+        score1: score1,
+        equipo2: equipo2,
+        score2: score2,
+        status: status
+    })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+function updatePartido(){
+    let id = 1
+    let equipo1 = "USA"
+    let score1 = 2
+    let equipo2 = "China"
+    let score2 = 3
+    let status = "En emisión"
+    axios.post("https://backvolei-production.up.railway.app/updatePartido", {
         id:id,
         equipo1: equipo1,
         score1: score1,
