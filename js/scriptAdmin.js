@@ -1,11 +1,55 @@
-delEquipo()
+
+
+function consultarEquipo(){
+    axios.get("https://backvolei-production.up.railway.app/")
+        .then(function (response) {
+            console.log(response);
+            tablaEquipos(response.data)
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
 
 function agregarEquipo() {
-    //ejemplos de datos, debe tomar los del formulario
     let id = 1
     let nombre = "China"
     let score = 100
     axios.post("https://backvolei-production.up.railway.app/addEquipo", {
+        id: id,
+        nombre: nombre,
+        score: score
+    })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+function delEquipo() {
+    let id = 12
+    let nombre = "China"
+    let score = 100
+    axios.post("https://backvolei-production.up.railway.app/delEquipo", {
+        id: id,
+        nombre: nombre,
+        score: score
+    })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+function updateEquipo() {
+    let id = 11
+    let nombre = "Peru"
+    let score = 500
+    axios.post("https://backvolei-production.up.railway.app/updateEquipo", {
         id: id,
         nombre: nombre,
         score: score
@@ -41,20 +85,3 @@ function agregarPartido(){
         });
 }
 
-function delEquipo() {
-    //ejemplos de datos, debe tomar los del formulario
-    let id = 12
-    let nombre = "China"
-    let score = 100
-    axios.post("https://backvolei-production.up.railway.app/delEquipo", {
-        id: id,
-        nombre: nombre,
-        score: score
-    })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-}
