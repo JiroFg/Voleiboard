@@ -127,7 +127,7 @@
           <input type="text" id="agregarPais" placeholder="País">
           <input type="text" id="agregarPuntaje" placeholder="Puntuación">
         </div>
-        <input type="submit" class="btn-submit" id="btn-Agregar1" value="Agregar">
+        <input id="submitAgregarEquipo" type="submit" class="btn-submit" value="Agregar">
       </form>
     </div>
   </div>
@@ -167,15 +167,17 @@
       <h3>Agregar Partido</h3>
       <form action="">
         <div class="inputsContainer">
-          <input type="text" placeholder="Puntuación equipo1">
-          <input type="text" placeholder="Puntuación equipo2">
-          <select class="form-select" id="sel1">
+          <input id="textAgregarPartidoNombre1" type="text" placeholder="Nombre Equipo 1">
+          <input id="textAgregarPartidoPuntuacion1" type="text" placeholder="Puntuación Equipo 1">
+          <input id="textAgregarPartidoNombre2" type="text" placeholder="Nombre Equipo 1">
+          <input id="textAgregarPartidoPuntuacion2" type="text" placeholder="Puntuación Equipo 2">
+          <select class="form-select" id="seleccionAgregar">
             <option>Por comenzar</option>
             <option>En emisión</option>
             <option>Finalizado</option>
           </select><br>
         </div>
-        <input type="submit" class="btn-submit" value="Agregar">
+        <input id="submitAgregarPartido" type="submit" class="btn-submit" value="Agregar">
       </form>
     </div>
   </div>
@@ -186,16 +188,18 @@
       <h3>Modificar Partido</h3>
       <form action="">
         <div class="inputsContainer">
-          <input type="text" placeholder="ID del partido">
-          <input type="text" placeholder="Equipo 1">
-          <input type="text" placeholder="Equipo 2">
-          <select class="form-select" id="sel1">
+          <input id="textModificarPartidoID" type="text" placeholder="ID del partido">
+          <input id="textModificarPartidoNombre1" type="text" placeholder="Nombre Equipo 1">
+          <input id="textModificarPartidoPuntuacion1" type="text" placeholder="Puntuación Equipo 1">
+          <input id="textModificarPartidoNombre2" type="text" placeholder="Nombre Equipo 2">
+          <input id="textModificarPartidoPuntuacion2" type="text" placeholder="Puntuación Equipo 2">
+          <select class="form-select" id="seleccionModificar">
             <option>Por comenzar</option>
             <option>En emisión</option>
             <option>Finalizado</option>
           </select><br>
         </div>
-        <input type="submit" class="btn-submit" value="Modificar">
+        <input id="submitModificarPartido"type="submit" class="btn-submit" value="Modificar">
       </form>
     </div>
   </div>
@@ -206,9 +210,9 @@
       <h3>Eliminar Partido</h3>
       <form action="">
         <div class="inputsContainer">
-          <input type="text" placeholder="ID del partido">
+          <input id="textEliminarPartido" type="text" placeholder="ID del partido">
         </div>
-        <input type="submit" class="btn-submit" value="Eliminar">
+        <input id="submitEliminarPartido" type="submit" class="btn-submit" value="Eliminar">
       </form>
     </div>
   </div>
