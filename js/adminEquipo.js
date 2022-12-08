@@ -44,7 +44,7 @@ function allTablaEquipos(response) {
             text.setAttribute("value",id);
             text2.setAttribute("value",id);
             let toast = document.getElementById("liveToast")
-            var option={animation: true, delay:1000};
+            //var option={delay:2000};
             let bs = new bootstrap.Toast(toast);
             bs.show()
         });
@@ -52,7 +52,7 @@ function allTablaEquipos(response) {
 }
 
 function agregarEquipo() {
-    let btn = document.getElementById("submitAgregarEquipo");
+    let btn = document.getElementById("btn-Agregar1")
     btn.addEventListener("click",function(){
         let id = 1
         let nombre = document.getElementById("agregarPais").value
