@@ -1,17 +1,4 @@
-delPartido();
-//consultarEquipo();
-//consultarPartido();
-
-function consultarEquipo(){
-    axios.get("https://backvolei-production.up.railway.app/allEquipos")
-        .then(function (response) {
-            console.log(response);
-            allTablaEquipos(response.data)
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-}
+consultarPartido();
 
 function consultarPartido(){
     axios.get("https://backvolei-production.up.railway.app/allPartidos")
@@ -49,91 +36,7 @@ function allTablaPartidos(response) {
         auxCell6.textContent = myObj[x].status;
         let auxCell7 = auxRow.insertCell(6);
         auxCell7.appendChild(boton);
-
-<<<<<<< HEAD
-        let obtenerBoton = document.getElementById(myObj[x].id);
-        obtenerBoton.addEventListener("click", function () {
-            $(".liveToast")
-        })
-=======
-        // let obtenerBoton = document.getElementById(myObj[x].id);
-        // obtenerBoton.addEventListener("click", function () {
-        //     $(".liveToast")
-        // }
->>>>>>> 386f12123f8abf85246e170a8137cc1702579080
     }
-}
-
-function allTablaEquipos(response) {
-    const myObj = JSON.parse(JSON.stringify(response));
-    console.log(myObj);
-    let aux = document.getElementById("cuerpoTabla");
-    for (let x in myObj) {
-        let boton = document.createElement("button"); 
-        boton.setAttribute("class", "btn btn-outline-primary");
-        boton.setAttribute("type", "button");
-        boton.innerHTML = "Seleccionar";
-        let auxRow = aux.insertRow(-1);
-        let auxCell = auxRow.insertCell(0);
-        auxCell.textContent = myObj[x].id;
-        let auxCell2 = auxRow.insertCell(1);
-        auxCell2.textContent = myObj[x].nombre;
-        let auxCell3 = auxRow.insertCell(2);
-        auxCell3.textContent = myObj[x].score;
-        let auxCell4 = auxRow.insertCell(3);
-        auxCell4.appendChild(boton);
-    }
-}
-
-function agregarEquipo() {
-    let id = 1
-    let nombre = "China"
-    let score = 100
-    axios.post("https://backvolei-production.up.railway.app/addEquipo", {
-        id: id,
-        nombre: nombre,
-        score: score
-    })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-}
-
-function delEquipo() {
-    let id = 12
-    let nombre = "China"
-    let score = 100
-    axios.post("https://backvolei-production.up.railway.app/delEquipo", {
-        id: id,
-        nombre: nombre,
-        score: score
-    })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-}
-
-function updateEquipo() {
-    let id = 11
-    let nombre = "Peru"
-    let score = 500
-    axios.post("https://backvolei-production.up.railway.app/updateEquipo", {
-        id: id,
-        nombre: nombre,
-        score: score
-    })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
 }
 
 function agregarPartido(){
@@ -204,4 +107,3 @@ function updatePartido(){
             console.log(error);
         });
 }
-
