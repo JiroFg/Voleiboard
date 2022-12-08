@@ -18,11 +18,12 @@
   <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
     <div id="liveToast" class="toast hide fade" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
+        <img src="img/logoColor.png" width="20" height="20" class="rounded me-2" alt="...">
         <strong class="me-auto">Voleiboard</strong>
         <small></small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
-      <div class="toast-body">
+      <div class="toast-body" style="color: green;">
         Elemento de la tabla seleccionado.
       </div>
     </div>
@@ -167,15 +168,17 @@
       <h3>Agregar Partido</h3>
       <form action="">
         <div class="inputsContainer">
-          <input type="text" placeholder="Puntuación equipo1">
-          <input type="text" placeholder="Puntuación equipo2">
-          <select class="form-select" id="sel1">
+          <input id="textEquipo1" type="text" placeholder="Equipo 1">
+          <input id="textScore1" type="textPuntuacion1" placeholder="Puntuación equipo 1">
+          <input id="textEquipo2" type="textEquipo2" placeholder="Equipo 2">
+          <input id="textScore2" type="textPuntuacion2" placeholder="Puntuación equipo 2">
+          <select class="form-select" id="comboBox">
             <option>Por comenzar</option>
             <option>En emisión</option>
             <option>Finalizado</option>
           </select><br>
         </div>
-        <input type="submit" class="btn-submit" value="Agregar">
+        <button id="btnSubmitAddPartido" class="btn-submit">Agregar</button>
       </form>
     </div>
   </div>
@@ -186,16 +189,18 @@
       <h3>Modificar Partido</h3>
       <form action="">
         <div class="inputsContainer">
-          <input type="text" placeholder="ID del partido">
-          <input type="text" placeholder="Equipo 1">
-          <input type="text" placeholder="Equipo 2">
-          <select class="form-select" id="sel1">
+          <input id="textModPartido" type="text" placeholder="Id">
+          <input id="textEquipo1mod" type="text" placeholder="Equipo 1">
+          <input id="textScore1mod" type="textPuntuacion1" placeholder="Puntuación equipo 1">
+          <input id="textEquipo2mod" type="textEquipo2" placeholder="Equipo 2">
+          <input id="textScore2mod" type="textPuntuacion2" placeholder="Puntuación equipo 2">
+          <select class="form-select" id="comboBoxMod">
             <option>Por comenzar</option>
             <option>En emisión</option>
             <option>Finalizado</option>
           </select><br>
         </div>
-        <input type="submit" class="btn-submit" value="Modificar">
+        <button id="btnSubmitModPartido" class="btn-submit">Modificar</button>
       </form>
     </div>
   </div>
@@ -206,9 +211,9 @@
       <h3>Eliminar Partido</h3>
       <form action="">
         <div class="inputsContainer">
-          <input type="text" placeholder="ID del partido">
+          <input id="textEliminarPartido" type="text" placeholder="Id">
         </div>
-        <input type="submit" class="btn-submit" value="Eliminar">
+        <button id="btnSubmitEliminarPartido" class="btn-submit">Eliminar</button>
       </form>
     </div>
   </div>

@@ -44,7 +44,6 @@ function allTablaEquipos(response) {
             text.setAttribute("value",id);
             text2.setAttribute("value",id);
             let toast = document.getElementById("liveToast")
-            //var option={delay:2000};
             let bs = new bootstrap.Toast(toast);
             bs.show()
         });
@@ -72,13 +71,13 @@ function agregarEquipo() {
     })
 }
 
-function delEquipo() {
-    let btn = document.getElementById("submitEliminarEquipo")
+function updateEquipo() {
+    let btn = document.getElementById("submitModificarEquipo")
     btn.addEventListener("click",function(){
-    let id = document.getElementById("textEliminarEquipo").value
-    let nombre = "China"
-    let score = 100
-    axios.post("https://backvolei-production.up.railway.app/delEquipo", {
+    let id = document.getElementById("textModificarEquipoId").value
+    let nombre = document.getElementById("textModificarEquipoNombre").value
+    let score = document.getElementById("textModificarEquipoScore").value
+    axios.post("https://backvolei-production.up.railway.app/updateEquipo", {
         id: id,
         nombre: nombre,
         score: score
@@ -92,13 +91,13 @@ function delEquipo() {
     })
 }
 
-function updateEquipo() {
-    let btn = document.getElementById("submitModificarEquipo")
+function delEquipo() {
+    let btn = document.getElementById("submitEliminarEquipo")
     btn.addEventListener("click",function(){
-    let id = document.getElementById("textModificarEquipoId").value
-    let nombre = document.getElementById("textModificarEquipoNombre").value
-    let score = document.getElementById("textModificarEquipoScore").value
-    axios.post("https://backvolei-production.up.railway.app/updateEquipo", {
+    let id = document.getElementById("textEliminarEquipo").value
+    let nombre = "China"
+    let score = 100
+    axios.post("https://backvolei-production.up.railway.app/delEquipo", {
         id: id,
         nombre: nombre,
         score: score
