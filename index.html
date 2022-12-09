@@ -14,30 +14,30 @@
   <!-- Navigation bar -->
   <nav class="navbar navbar-expand-sm" style="background-color:#FFCC00;">
     <div class="container-md">
-      <a class="navbar-brand" href="#"><img src="img/volei2.png" alt="Imagen principal de la pagina 'Voleiboard'"  width="170" height="40" class="d-inline-block align-top"></a>
+      <a class="navbar-brand"><img src="img/volei2.png" alt="Imagen principal de la pagina 'Voleiboard'"  width="170" height="40" class="d-inline-block align-top" tabindex="0"></a>
       <button alt="Icono de toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span alt="Icono de toggler" class="navbar-toggler-icon"></span><p hidden>Desplegable</p>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+        <ul aria-label="Menú principal" class="navbar-nav ms-auto">
+          <li class="nav-item" >
+            <a class="nav-link"  href="index.html" tabindex="1">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="partidos.html">Partidos</a>
+            <a class="nav-link" href="partidos.html" aria-label="Informacion sobre partidos" tabindex="2">Partidos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="estadisticas.html">Estadísticas</a>
+            <a class="nav-link" href="estadisticas.html" tabindex="3">Estadísticas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link rounded" style="background-color: #003399; color: white;" href="admin.html"> Administración </a>
+            <a class="nav-link rounded" style="background-color: #003399; color: white;" href="admin.html" tabindex="4"> Administración </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- Contenido -->
-  <div class="container">
+  <div class="container" tabindex="5">
     <div class="row p-4 text-center"><h2>Ranking de la copa mundial <br><img src="img/winner.png" alt="trofeo" width="150" height="150"></h2></div>
     <div class="row">
         <div class="p-2 rounded-top" style="background-color: lightblue; color: black; font-weight: bold;"><img src="img/male.png" alt="Masculino" width="30" height="30">      Varonil</div>
