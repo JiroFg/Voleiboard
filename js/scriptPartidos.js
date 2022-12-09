@@ -21,7 +21,7 @@ function agregarPartido(response) {
         text += "</tr>"
         text += "</thead>"
         text += "</table>"
-        text += "<button type='Button' class='btn btn-primary' aria-label='Mas información sobre el partido"+ myObj[x].equipo1 + myObj[x].equipo2+"' tabindex= '"+ cont2+1 +"'>Más info</button>"
+        text += "<button type='Button' class='btn btn-primary' aria-label='Mas información sobre el partido"+ myObj[x].equipo1 + myObj[x].equipo2+"' tabindex= '"+ cont2+1 +"'>Más info "+ myObj[x].equipo1 + " - "+myObj[x].equipo2+"</button>"
         text += "</div>"
         document.getElementById("bloque"+cont).innerHTML = text;
         cont ++
