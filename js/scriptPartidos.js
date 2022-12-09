@@ -4,6 +4,7 @@ function agregarPartido(response) {
     const myObj = JSON.parse(JSON.stringify(response));
     console.log(myObj);
     let cont = 1
+    let cont2=4
     for (let x in myObj) {
         let text = ""
         console.log(myObj[x].equipo1+" "+myObj[x].score1+" "+myObj[x].equipo2+" "+myObj[x].score2+" "+myObj[x].status)
@@ -20,7 +21,7 @@ function agregarPartido(response) {
         text += "</tr>"
         text += "</thead>"
         text += "</table>"
-        text += "<button type='Button' class='btn btn-primary'>Más info</button>"
+        text += "<button type='Button' class='btn btn-primary' aria-label='Mas información sobre el partido"+ myObj[x].equipo1 + myObj[x].equipo2+"' tabindex= '"+ cont2+1 +"'>Más info</button>"
         text += "</div>"
         document.getElementById("bloque"+cont).innerHTML = text;
         cont ++
