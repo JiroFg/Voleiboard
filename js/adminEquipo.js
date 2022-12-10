@@ -25,7 +25,10 @@ function allTablaEquipos(response) {
         boton.setAttribute("class", "btn btn-outline-primary");
         boton.setAttribute("type", "button");
         boton.setAttribute("id","equipo"+(myObj[x].id));
+        boton.setAttribute("title", "Boton de seleccion de ID "+ (myObj[x].id)+" del equipo "+ (myObj[x].nombre)+" con puntuación de " + (myObj[x].score)+" puntos");
+        //boton.setAttribute("aria-label", "Boton de seleccion de "+ (myObj[x].id));
         boton.innerHTML = "Seleccionar";
+        
         let auxRow = aux.insertRow(-1);
         let auxCell = auxRow.insertCell(0);
         auxCell.textContent = myObj[x].id;

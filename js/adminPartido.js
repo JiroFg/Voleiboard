@@ -24,23 +24,34 @@ function allTablaPartidos(response) {
         let boton = document.createElement("button"); 
         boton.setAttribute("class", "btn btn-outline-primary");
         boton.setAttribute("type", "button");
+        boton.setAttribute("title", "Boton de seleccion de ID "+ (myObj[x].id)+" del equipo "+ (myObj[x].equipo1)+" y " + (myObj[x].equipo2));
+       //boton.setAttribute("aria-label", "Boton de seleccion de "+ (myObj[x].id));
         boton.setAttribute("id", "partido"+myObj[x].id);
         boton.innerHTML = "Seleccionar";
+
         let auxRow = aux.insertRow(-1);
         let auxCell = auxRow.insertCell(0);
         auxCell.textContent = myObj[x].id;
+        auxCell.setAttribute("tabIndex","5");
+        auxCell.setAttribute("aria-label", "ID "+(myObj[x].id));
         let auxCell2 = auxRow.insertCell(1);
         auxCell2.textContent = myObj[x].equipo1;
+        auxCell2.setAttribute("tabIndex","5");
         let auxCell3 = auxRow.insertCell(2);
         auxCell3.textContent = myObj[x].score1;
+        auxCell3.setAttribute("tabIndex","5");
         let auxCell4 = auxRow.insertCell(3);
         auxCell4.textContent = myObj[x].equipo2;
+        auxCell4.setAttribute("tabIndex","5");
         let auxCell5 = auxRow.insertCell(4);
         auxCell5.textContent = myObj[x].score2;
+        auxCell5.setAttribute("tabIndex","5");
         let auxCell6 = auxRow.insertCell(5);
         auxCell6.textContent = myObj[x].status;
+        auxCell6.setAttribute("tabIndex","5");
         let auxCell7 = auxRow.insertCell(6);
         auxCell7.appendChild(boton);
+        boton.setAttribute("tabIndex","5");
         let obtenerBoton = document.getElementById("partido"+(myObj[x].id));
         obtenerBoton.addEventListener("click", function () {
             id2 = myObj[x].id;

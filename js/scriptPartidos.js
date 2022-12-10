@@ -8,11 +8,11 @@ function agregarPartido(response) {
     for (let x in myObj) {
         let text = ""
         console.log(myObj[x].equipo1+" "+myObj[x].score1+" "+myObj[x].equipo2+" "+myObj[x].score2+" "+myObj[x].status)
-        text += "<div class='p-4 rounded' style='background-color: white;'>"
+        text += "<div class='p-4 rounded' style='background-color: white;' tabindex= '"+cont2+1+"'>"
         text += "<h6>"
         text += myObj[x].equipo1 + " - " + myObj[x].equipo2;
         text += "</h6>"
-        text += "<h6 class='text-success'>Finalizado</h6>"
+        text += "<h6 class='text-success' aria-label='Finalizado... Resultado de "+myObj[x].equipo1 + " - "+myObj[x].equipo2+" fué de"+myObj[x].score1+" a " +myObj[x].score2 +"'>Finalizado</h6>"
         text += "<table class='table text-center table-bordered'>"
         text += "<thead class ='thead'>"
         text += "<tr>"

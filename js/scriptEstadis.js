@@ -13,6 +13,7 @@ function consultar(){
 
 function graficar(response){
     const myObj = JSON.parse(JSON.stringify(response));
+
     const ctx = document.getElementById('myChart');
     new Chart(ctx, {
       type: 'bar',
@@ -35,6 +36,7 @@ function graficar(response){
             'rgb(204, 255, 204)',
             'rgb(255, 204, 255)'
           ]
+          
         }]
       },
       options: {
