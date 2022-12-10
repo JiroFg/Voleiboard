@@ -27,15 +27,24 @@ function allTablaEquipos(response) {
         boton.setAttribute("id","equipo"+(myObj[x].id));
         boton.setAttribute("title", "Boton de seleccion de ID "+ (myObj[x].id)+" del equipo "+ (myObj[x].nombre)+" con puntuación de " + (myObj[x].score)+" puntos");
         //boton.setAttribute("aria-label", "Boton de seleccion de "+ (myObj[x].id));
+        boton.setAttribute("tabIndex","4");
         boton.innerHTML = "Seleccionar";
         
         let auxRow = aux.insertRow(-1);
         let auxCell = auxRow.insertCell(0);
         auxCell.textContent = myObj[x].id;
+        auxCell.setAttribute("tabIndex","4");
+        auxCell.setAttribute("aria-label", "ID "+(myObj[x].id));
+
         let auxCell2 = auxRow.insertCell(1);
         auxCell2.textContent = myObj[x].nombre;
+        auxCell2.setAttribute("tabIndex","4");
+        auxCell2.setAttribute("aria-label", "Nombre del equipo "+(myObj[x].nombre));
+
         let auxCell3 = auxRow.insertCell(2);
         auxCell3.textContent = myObj[x].score;
+        auxCell3.setAttribute("tabIndex","4");
+        auxCell3.setAttribute("aria-label", "Puntuación del equipo "+(myObj[x].score)+" puntos");
         let auxCell4 = auxRow.insertCell(3);
         auxCell4.appendChild(boton);
         let obtenerBoton = document.getElementById("equipo"+(myObj[x].id));

@@ -34,25 +34,37 @@ function allTablaPartidos(response) {
         auxCell.textContent = myObj[x].id;
         auxCell.setAttribute("tabIndex","5");
         auxCell.setAttribute("aria-label", "ID "+(myObj[x].id));
+
         let auxCell2 = auxRow.insertCell(1);
         auxCell2.textContent = myObj[x].equipo1;
         auxCell2.setAttribute("tabIndex","5");
+        auxCell2.setAttribute("aria-label", "Nombre del equipo 1 "+(myObj[x].equipo1));
+
         let auxCell3 = auxRow.insertCell(2);
         auxCell3.textContent = myObj[x].score1;
         auxCell3.setAttribute("tabIndex","5");
+        auxCell3.setAttribute("aria-label", "Puntuación del equipo 1 "+(myObj[x].score1));
+
         let auxCell4 = auxRow.insertCell(3);
         auxCell4.textContent = myObj[x].equipo2;
         auxCell4.setAttribute("tabIndex","5");
+        auxCell4.setAttribute("aria-label", "Nombre del equipo 2 "+(myObj[x].equipo2));
+
         let auxCell5 = auxRow.insertCell(4);
         auxCell5.textContent = myObj[x].score2;
         auxCell5.setAttribute("tabIndex","5");
+        auxCell5.setAttribute("aria-label", "Puntuación del equipo 2 "+(myObj[x].score2));
+
         let auxCell6 = auxRow.insertCell(5);
         auxCell6.textContent = myObj[x].status;
         auxCell6.setAttribute("tabIndex","5");
+        auxCell6.setAttribute("aria-label", "Estado del partido "+(myObj[x].status));
+
         let auxCell7 = auxRow.insertCell(6);
         auxCell7.appendChild(boton);
         boton.setAttribute("tabIndex","5");
         let obtenerBoton = document.getElementById("partido"+(myObj[x].id));
+
         obtenerBoton.addEventListener("click", function () {
             id2 = myObj[x].id;
             console.log(id2);
