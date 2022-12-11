@@ -1,10 +1,11 @@
+//---------------- Ejecucion de las funciones ----------------//
 consultarEquipo();
 agregarEquipo();
 delEquipo();
 updateEquipo();
 
 let id = 0
-
+//---------------- Se consulta en el railway el backend del sistema ----------------//
 function consultarEquipo(){
     axios.get("https://backvolei-production.up.railway.app/allEquipos")
         .then(function (response) {
@@ -15,7 +16,7 @@ function consultarEquipo(){
             console.log(error);
         });
 }
-
+//---------------- Asignar datos a la tabla ----------------//
 function allTablaEquipos(response) {
     const myObj = JSON.parse(JSON.stringify(response));
     console.log(myObj);
@@ -45,9 +46,11 @@ function allTablaEquipos(response) {
         auxCell3.textContent = myObj[x].score;
         auxCell3.setAttribute("tabIndex","4");
         auxCell3.setAttribute("aria-label", "Puntuación del equipo "+(myObj[x].score)+" puntos");
+
         let auxCell4 = auxRow.insertCell(3);
         auxCell4.appendChild(boton);
         let obtenerBoton = document.getElementById("equipo"+(myObj[x].id));
+// #---------------- Evento del botón ----------------# //
         obtenerBoton.addEventListener("click", function () {
             id = myObj[x].id;
             console.log(id);
@@ -61,7 +64,7 @@ function allTablaEquipos(response) {
         });
     }
 }
-
+//---------------- Agrega mas elementos al backend ----------------//
 function agregarEquipo() {
     let btn = document.getElementById("btn-Agregar1")
     btn.addEventListener("click",function(){
@@ -82,7 +85,7 @@ function agregarEquipo() {
         });
     })
 }
-
+//---------------- Actualiza los equipos ----------------//
 function updateEquipo() {
     let btn = document.getElementById("submitModificarEquipo")
     btn.addEventListener("click",function(){
@@ -102,7 +105,7 @@ function updateEquipo() {
         });
     })
 }
-
+//---------------- Elimina equipos ----------------//
 function delEquipo() {
     let btn = document.getElementById("submitEliminarEquipo")
     btn.addEventListener("click",function(){

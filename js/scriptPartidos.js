@@ -1,10 +1,13 @@
+//---------------- Ejecucion de la función consulta ----------------//
 consultar()
-
+//---------------- Función para agregar partidos ----------------//
 function agregarPartido(response) {
     const myObj = JSON.parse(JSON.stringify(response));
     console.log(myObj);
     let cont = 1
+// #----------- cont2 es una variable auxiliar para implementar la secuencia de tabindex -----------# //
     let cont2=4
+//---------------- Recorrido del obj ----------------//
     for (let x in myObj) {
         let text = ""
         console.log(myObj[x].equipo1+" "+myObj[x].score1+" "+myObj[x].equipo2+" "+myObj[x].score2+" "+myObj[x].status)
@@ -27,7 +30,7 @@ function agregarPartido(response) {
         cont ++
     }
 }
-
+//---------------- Se consulta en el railway el backend del sistema ----------------//
 function consultar(){
     axios.get("https://backvolei-production.up.railway.app/partidos")
         .then(function (response) {

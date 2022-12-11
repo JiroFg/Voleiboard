@@ -1,10 +1,11 @@
+//---------------- Ejecucion de las funciones ----------------//
 consultarPartido();
 agregarPartido();
 updatePartido();
 delPartido();
 
 let id2 = 0
-
+//---------------- Se consulta en el railway el backend del sistema ----------------//
 function consultarPartido(){
     axios.get("https://backvolei-production.up.railway.app/allPartidos")
         .then(function (response) {
@@ -15,7 +16,7 @@ function consultarPartido(){
             console.log(error);
         });
 }
-
+//---------------- Asignar datos a la tabla ----------------//
 function allTablaPartidos(response) {
     const myObj = JSON.parse(JSON.stringify(response));
     console.log(myObj);
@@ -64,7 +65,7 @@ function allTablaPartidos(response) {
         auxCell7.appendChild(boton);
         boton.setAttribute("tabIndex","5");
         let obtenerBoton = document.getElementById("partido"+(myObj[x].id));
-
+// #---------------- Evento del botón ----------------# //
         obtenerBoton.addEventListener("click", function () {
             id2 = myObj[x].id;
             console.log(id2);
@@ -78,7 +79,7 @@ function allTablaPartidos(response) {
         });
     }
 }
-
+//---------------- Agrega mas elementos al backend ----------------//
 function agregarPartido(){
     let btn = document.getElementById("btnSubmitAddPartido")
     btn.addEventListener("click",function(){
@@ -104,7 +105,7 @@ function agregarPartido(){
             });
     })
 }
-
+//---------------- Actualiza datos de partidos ----------------//
 function updatePartido(){
     let btn = document.getElementById("btnSubmitModPartido")
     btn.addEventListener("click",function(){
@@ -131,7 +132,7 @@ function updatePartido(){
             });
     });
 }
-
+//---------------- Elimina partidos ----------------//
 function delPartido(){
     let btn = document.getElementById("btnSubmitEliminarPartido")
     btn.addEventListener("click",function(){
